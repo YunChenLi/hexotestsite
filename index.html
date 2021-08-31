@@ -5,18 +5,20 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <link rel="dns-prefetch" href="http://example.com">
-  <title>Hexo</title>
+  <link rel="dns-prefetch" href="https://yunchenli.github.io">
+  <title>Tiffany&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://example.com/index.html">
-<meta property="og:site_name" content="Hexo">
+  <meta name="description" content="Work Life Balance">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tiffany&#39;s Blog">
+<meta property="og:url" content="https://yunchenli.github.io/index.html">
+<meta property="og:site_name" content="Tiffany&#39;s Blog">
+<meta property="og:description" content="Work Life Balance">
 <meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="article:author" content="YUNCHENLI">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Tiffany&#39;s Blog" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -176,9 +178,8 @@
 <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>此篇文章重點紀錄2020疫情下在筆電系統廠工作的心得。<br>由於之前在IC設計及半導體產業，從未接觸過筆電產業，也因為自我的好奇心加上職涯轉職的轉捩點，誤打誤撞下進入了某外商軟體研發部門擔任軟體主管工程師。負責十四個量產Chromebook的軟體trouble-shooting以及RMA(Return Material Authorization)。大家可能會好奇量產的筆電maintainence是很stable，畢竟已經在市面上販售一段時間。其實不然，以下以軟體PM角度歸列幾點Chromebook運作上的痛點(pain point)</p>
 <h2 id="首先，Chromebook缺料問題嚴重"><a href="#首先，Chromebook缺料問題嚴重" class="headerlink" title="首先，Chromebook缺料問題嚴重"></a>首先，Chromebook缺料問題嚴重</h2><p>Chromebook在2020及2021年大缺料，每家筆電廠都秉持著「即便追料追到爆，但手上有料也先供給毛利好的伺服器、通訊類產品，最後才輪到Chromebook，因為Chromebook的毛利相對較低」。因此，在Chromebook需求於歐美市場暴增卻又面臨缺料問題時，會衍生許多PCR/ECR/SCR Assessment來評估2nd source尋找缺貨的替代料。</p>
 <h2 id="第二點，Chromebook的軟韌體更新時程是follow-Google-schedule"><a href="#第二點，Chromebook的軟韌體更新時程是follow-Google-schedule" class="headerlink" title="第二點，Chromebook的軟韌體更新時程是follow Google schedule"></a>第二點，Chromebook的軟韌體更新時程是follow Google schedule</h2><p>進行缺料評估同時也要確認是否能趕上Google的Firmware release date. 當軟體評估需要變更的當下，就要考慮到Google Firmware Release Date的排成，如果變更BIOS(Basic input and output system)和EC(Embedded controller)，需要在branch date之前提交變動(submit CL)並由Google review change request。如果只需更動OS layer kernel，則在Stable cut前提交變更也是經由Google review。<br>有關BIOS變動需提交到Google coreboot請Google人員協助review <a target="_blank" rel="noopener" href="https://review.coreboot.org/q/status:open+-is:wip">https://review.coreboot.org/q/status:open+-is:wip</a></p>
-<p>![](<a target="_blank" rel="noopener" href="https://cdn-images-1.medium.com/max/1600/0*_0gIxefEQnan9w0M.png%EF%BC%89">https://cdn-images-1.medium.com/max/1600/0*_0gIxefEQnan9w0M.png）</a></p>
-<p>Google Firmware Release Schedule<br>有關於Google release的時間也可以到Google platform status的頁面確認<br>![alt](<a target="_blank" rel="noopener" href="https://cdn-images-1.medium.com/max/1600/0*_0gIxefEQnan9w0M.png%EF%BC%89">https://cdn-images-1.medium.com/max/1600/0*_0gIxefEQnan9w0M.png）</a></p>
-<h2 id="第三點，Chromebook軟體更改彈性小"><a href="#第三點，Chromebook軟體更改彈性小" class="headerlink" title="第三點，Chromebook軟體更改彈性小"></a>第三點，Chromebook軟體更改彈性小</h2><p>關於Chromebook的軟韌體開發取決於Google，可以參考 <a target="_blank" rel="noopener" href="https://chromium.googlesource.com/">https://chromium.googlesource.com/</a> 裡面包含了所有 Git repositories on chromium。下面簡易介紹Chrome OS Intel Firmware軟體架構的部分，ODM 指變更Chromebook的payload部分，大部分底層的code還是由Google控制。<br>![alt]（/image/chromeos firmware structure.png）</p>
+<p>![](chrome schedule-2.png)<br>Google Firmware Release Schedule<br>有關於Google release的時間也可以到Google platform status的頁面確認<br>![](chrome schedule-1.png)</p>
+<h2 id="第三點，Chromebook軟體更改彈性小"><a href="#第三點，Chromebook軟體更改彈性小" class="headerlink" title="第三點，Chromebook軟體更改彈性小"></a>第三點，Chromebook軟體更改彈性小</h2><p>關於Chromebook的軟韌體開發取決於Google，可以參考 <a target="_blank" rel="noopener" href="https://chromium.googlesource.com/">https://chromium.googlesource.com/</a> 裡面包含了所有 Git repositories on chromium。下面簡易介紹Chrome OS Intel Firmware軟體架構的部分，ODM 指變更Chromebook的payload部分，大部分底層的code還是由Google控制。<br>![](chromeos firmware structure.png)</p>
 <p>總結以上三點，大致描述我在這一年裡maintain Chromebook量產看到的現象，雖然根據TrendForce調查，2020年因遠距辦公與教學等宅經濟需求，使筆電出貨表現打破過去年增、減3%的低谷循環，年成長近26%，而此波強勁的需求動能也延續至2021年，預估今年出貨量將突破2.36億台，年成長率約15%。其中，因教育用筆電需求高漲所致，Chromebook將成為拉抬整體筆電市場成長的關鍵。不過隨著疫苗的普及以及各國陸續解封，值得注意的是，近期市場傳出對於下半年筆電需求減緩的雜音，主因是Chromebook低毛利的衝擊逐漸發酵所致，同時又面臨近七成Chromebook主要使用的11.6吋面板大幅漲價，以及半導體長短料等壓力，促使品牌開始調整下半年的生產占比。TrendForce預估，第三季歐美等消費需求將逐漸收斂，不過受到通路市場因低庫存的回補需求影響，仍對筆電市場存有一定支撐力道，故出貨水準將可能與第二季持平。<br>此外，隨著歐美各國在施打疫苗比例提升下，疫情逐漸獲得控制，因此整體市場與教育標案的需求放緩所產生的效應，至第四季才會有較明顯的影響，預估該季筆電出貨量為5,800萬台，季減3%。身在Chromebook這個產業，我能深刻體會到Chromebook毛利低換料頻繁以及軟體上的限制，都影響量產維持的不易，加上近年RMA的需求及退貨比例增加，如果Chromebook無法在生產體制改善跟加強售後服務，以主打教育低價及低規格出售的筆電市場將不復存在。</p>
 
       
@@ -378,7 +379,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2021 John Doe
+    		&copy; 2021 YUNCHENLI
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
