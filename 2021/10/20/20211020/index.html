@@ -20,18 +20,18 @@
     var CONFIG = {"hostname":"yunchenli.github.io","root":"/hexotestsite/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Google分析是一個由Google所提供的網站流量統計服務。Google 分析現在是網際網路上使用最廣泛的網路分析服務。 讓我們快速browse GA的應用面，看完就可以實作專案監測網站的瀏覽人數囉～ 1. 先來了解一下GA介面的四大報表 目標對象 客戶開發 行為 轉換">
+  <meta name="description" content="Google分析是一個由Google所提供的網站流量統計服務。Google 分析現在是網際網路上使用最廣泛的網路分析服務。 讓我們快速browse GA的應用面，看完就可以實作專案監測網站的瀏覽人數囉～">
 <meta property="og:type" content="article">
 <meta property="og:title" content="五分鐘看懂Google Analytics">
 <meta property="og:url" content="https://yunchenli.github.io/hexotestsite/2021/10/20/20211020/">
 <meta property="og:site_name" content="Tiffany&#39;s Blog">
-<meta property="og:description" content="Google分析是一個由Google所提供的網站流量統計服務。Google 分析現在是網際網路上使用最廣泛的網路分析服務。 讓我們快速browse GA的應用面，看完就可以實作專案監測網站的瀏覽人數囉～ 1. 先來了解一下GA介面的四大報表 目標對象 客戶開發 行為 轉換">
+<meta property="og:description" content="Google分析是一個由Google所提供的網站流量統計服務。Google 分析現在是網際網路上使用最廣泛的網路分析服務。 讓我們快速browse GA的應用面，看完就可以實作專案監測網站的瀏覽人數囉～">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://i.imgur.com/MmD9cDN.png">
 <meta property="og:image" content="https://i.imgur.com/6aqqUns.png">
 <meta property="og:image" content="https://i.imgur.com/WyrcOok.png">
 <meta property="article:published_time" content="2021-10-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-10-29T07:41:30.078Z">
+<meta property="article:modified_time" content="2021-10-29T07:47:23.201Z">
 <meta property="article:author" content="YUNCHENLI">
 <meta property="article:tag" content="Google Analytics">
 <meta name="twitter:card" content="summary">
@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-29 15:41:30" itemprop="dateModified" datetime="2021-10-29T15:41:30+08:00">2021-10-29</time>
+                <time title="Modified: 2021-10-29 15:47:23" itemprop="dateModified" datetime="2021-10-29T15:47:23+08:00">2021-10-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -216,6 +216,8 @@
       
         <p>Google分析是一個由Google所提供的網站流量統計服務。Google 分析現在是網際網路上使用最廣泛的網路分析服務。</p>
 <p>讓我們快速browse GA的應用面，看完就可以實作專案監測網站的瀏覽人數囉～</p>
+<span id="more"></span>
+
 <h3 id="1-先來了解一下GA介面的四大報表"><a href="#1-先來了解一下GA介面的四大報表" class="headerlink" title="1. 先來了解一下GA介面的四大報表"></a>1. 先來了解一下GA介面的四大報表</h3><ol>
 <li>目標對象</li>
 <li>客戶開發</li>
@@ -223,8 +225,6 @@
 <li>轉換</li>
 </ol>
 <p><img src="https://i.imgur.com/MmD9cDN.png" alt="GA 四大報表"></p>
-<span id="more"></span>
-
 <p>用戶在瀏覽網站時候的用戶體驗，如何定義「好的」用戶體驗？<br><img src="https://i.imgur.com/6aqqUns.png" alt="Ref from https://adwords.googleblog.com/2015/06/better-click-quality-on-display-ads.html?fbclid=IwAR3e12siN_475IHZtfzqnfrn9vm2EqSQitnWIMyxmH8KNUN9C6VIb_1ZHc4"><br>1.該網頁就可以滿足訪客所有需要知道的資訊需求?<br>2.某網站全站只有一頁(如現在的瀑布流… 故這樣也就無法換頁..)<br>3.Google Analytics 追蹤程式碼安裝未完全?<br>4.該頁面上有部長度不到30分鐘的 Flash 或影片播放且還沒看完就突然要關掉視窗…..?<br>5.也如剛剛提到.. 因為網站 SEO 做太好所導致…</p>
 <h3 id="2-追蹤原理"><a href="#2-追蹤原理" class="headerlink" title="2. 追蹤原理"></a>2. 追蹤原理</h3><p>網站安裝GA代碼(JavaScript追蹤碼)，類似cookie，也藉由追蹤碼紀錄登錄的device以便用來分析使用者族群</p>
 <p>缺點：使用者分群以device（追蹤碼）為主，無法確認是否同一人使用多機狀態</p>
