@@ -31,7 +31,7 @@
 <meta property="og:image" content="https://i.imgur.com/6aqqUns.png">
 <meta property="og:image" content="https://i.imgur.com/WyrcOok.png">
 <meta property="article:published_time" content="2021-10-19T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-10-29T07:47:23.201Z">
+<meta property="article:modified_time" content="2021-10-29T08:27:49.374Z">
 <meta property="article:author" content="YUNCHENLI">
 <meta property="article:tag" content="Google Analytics">
 <meta name="twitter:card" content="summary">
@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-10-29 15:47:23" itemprop="dateModified" datetime="2021-10-29T15:47:23+08:00">2021-10-29</time>
+                <time title="Modified: 2021-10-29 16:27:49" itemprop="dateModified" datetime="2021-10-29T16:27:49+08:00">2021-10-29</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -226,8 +226,12 @@
 </ol>
 <p><img src="https://i.imgur.com/MmD9cDN.png" alt="GA 四大報表"></p>
 <p>用戶在瀏覽網站時候的用戶體驗，如何定義「好的」用戶體驗？<br><img src="https://i.imgur.com/6aqqUns.png" alt="Ref from https://adwords.googleblog.com/2015/06/better-click-quality-on-display-ads.html?fbclid=IwAR3e12siN_475IHZtfzqnfrn9vm2EqSQitnWIMyxmH8KNUN9C6VIb_1ZHc4"><br>1.該網頁就可以滿足訪客所有需要知道的資訊需求?<br>2.某網站全站只有一頁(如現在的瀑布流… 故這樣也就無法換頁..)<br>3.Google Analytics 追蹤程式碼安裝未完全?<br>4.該頁面上有部長度不到30分鐘的 Flash 或影片播放且還沒看完就突然要關掉視窗…..?<br>5.也如剛剛提到.. 因為網站 SEO 做太好所導致…</p>
-<h3 id="2-追蹤原理"><a href="#2-追蹤原理" class="headerlink" title="2. 追蹤原理"></a>2. 追蹤原理</h3><p>網站安裝GA代碼(JavaScript追蹤碼)，類似cookie，也藉由追蹤碼紀錄登錄的device以便用來分析使用者族群</p>
-<p>缺點：使用者分群以device（追蹤碼）為主，無法確認是否同一人使用多機狀態</p>
+<h3 id="2-追蹤原理"><a href="#2-追蹤原理" class="headerlink" title="2. 追蹤原理"></a>2. 追蹤原理</h3><p>網站安裝GA代碼(JavaScript追蹤碼)<br>其使用者追蹤原理 <strong>Client ID - CID</strong> Google analystics會發送一組cookie到你的browser, 類似cookie的作用</p>
+<p>缺點：</p>
+<ol>
+<li>使用者分群以device（追蹤碼）為主，無法確認是否同一人使用多機狀態</li>
+<li>如果使用者清除了cookie的紀錄，Google analystics無法辨認出是否同一人</li>
+</ol>
 <p><img src="https://i.imgur.com/WyrcOok.png" alt="GA全域追蹤碼"></p>
 <h3 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h3>
     </div>
