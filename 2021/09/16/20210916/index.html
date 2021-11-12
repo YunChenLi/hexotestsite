@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"yunchenli.github.io","root":"/hexotestsite/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="消費者在保固期間內返修電腦到原廠維修站，我們稱RMA(Return Merchandise Authorization) 定義（from wiki):A return merchandise authorization (RMA), return authorization (RA) or return goods authorization (RGA) is a part of the proc">
+  <meta name="description" content="消費者在保固期間內返修電腦到原廠維修站，我們稱RMA(Return Merchandise Authorization) Definition（from wiki):A return merchandise authorization (RMA), return authorization (RA) or return goods authorization (RGA) is a part of">
 <meta property="og:type" content="article">
 <meta property="og:title" content="維修站工程師都在幹嘛？深入RMA Process">
 <meta property="og:url" content="https://yunchenli.github.io/hexotestsite/2021/09/16/20210916/">
 <meta property="og:site_name" content="Tiffany&#39;s Blog">
-<meta property="og:description" content="消費者在保固期間內返修電腦到原廠維修站，我們稱RMA(Return Merchandise Authorization) 定義（from wiki):A return merchandise authorization (RMA), return authorization (RA) or return goods authorization (RGA) is a part of the proc">
+<meta property="og:description" content="消費者在保固期間內返修電腦到原廠維修站，我們稱RMA(Return Merchandise Authorization) Definition（from wiki):A return merchandise authorization (RMA), return authorization (RA) or return goods authorization (RGA) is a part of">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2021-09-15T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-11-12T08:24:56.552Z">
+<meta property="article:modified_time" content="2021-11-12T09:11:25.964Z">
 <meta property="article:author" content="YUNCHENLI">
 <meta property="article:tag" content="Linux">
 <meta property="article:tag" content="Toolkit">
@@ -191,7 +191,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2021-11-12 16:24:56" itemprop="dateModified" datetime="2021-11-12T16:24:56+08:00">2021-11-12</time>
+                <time title="Modified: 2021-11-12 17:11:25" itemprop="dateModified" datetime="2021-11-12T17:11:25+08:00">2021-11-12</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -215,11 +215,11 @@
 
       
         <h2 id="消費者在保固期間內返修電腦到原廠維修站，我們稱RMA-Return-Merchandise-Authorization"><a href="#消費者在保固期間內返修電腦到原廠維修站，我們稱RMA-Return-Merchandise-Authorization" class="headerlink" title="消費者在保固期間內返修電腦到原廠維修站，我們稱RMA(Return Merchandise Authorization)"></a>消費者在保固期間內返修電腦到原廠維修站，我們稱RMA(Return Merchandise Authorization)</h2><blockquote>
-<p>定義（<em>from wiki</em>):<br>A return merchandise authorization (RMA), return authorization (RA) or return goods authorization (RGA) is a part of the process of returning a product to receive a refund, replacement, or repair during the product’s warranty period. Both parties can decide how to deal with it, which could be refund, replacement or repair.</p>
+<p>Definition（<em>from wiki</em>):<br>A return merchandise authorization (RMA), return authorization (RA) or return goods authorization (RGA) is a part of the process of returning a product to receive a refund, replacement, or repair during the product’s warranty period. Both parties can decide how to deal with it, which could be refund, replacement or repair.</p>
 </blockquote>
 <span id="more"></span>
 
-<h2 id="商品問題的判斷定義（Define-and-Clarify"><a href="#商品問題的判斷定義（Define-and-Clarify" class="headerlink" title="商品問題的判斷定義（Define and Clarify)"></a>商品問題的判斷定義（Define and Clarify)</h2><p>The RMA shim image is designed to meet these requirements. An RMA shim image is a combination of existing Chrome OS factory bundle components, all combined into one disk, including:</p>
+<h2 id="RMA-Shim"><a href="#RMA-Shim" class="headerlink" title="RMA Shim"></a>RMA Shim</h2><p>The RMA shim image is designed to meet these requirements. An RMA shim image is a combination of existing Chrome OS factory bundle components, all combined into one disk, including:</p>
 <ul>
 <li>Factory install shim</li>
 <li>Release image (FSI)</li>
@@ -318,7 +318,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B6%88%E8%B2%BB%E8%80%85%E5%9C%A8%E4%BF%9D%E5%9B%BA%E6%9C%9F%E9%96%93%E5%85%A7%E8%BF%94%E4%BF%AE%E9%9B%BB%E8%85%A6%E5%88%B0%E5%8E%9F%E5%BB%A0%E7%B6%AD%E4%BF%AE%E7%AB%99%EF%BC%8C%E6%88%91%E5%80%91%E7%A8%B1RMA-Return-Merchandise-Authorization"><span class="nav-number">1.</span> <span class="nav-text">消費者在保固期間內返修電腦到原廠維修站，我們稱RMA(Return Merchandise Authorization)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%95%86%E5%93%81%E5%95%8F%E9%A1%8C%E7%9A%84%E5%88%A4%E6%96%B7%E5%AE%9A%E7%BE%A9%EF%BC%88Define-and-Clarify"><span class="nav-number">2.</span> <span class="nav-text">商品問題的判斷定義（Define and Clarify)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Troubleshooting-process"><span class="nav-number">3.</span> <span class="nav-text">Troubleshooting process</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%B6%88%E8%B2%BB%E8%80%85%E5%9C%A8%E4%BF%9D%E5%9B%BA%E6%9C%9F%E9%96%93%E5%85%A7%E8%BF%94%E4%BF%AE%E9%9B%BB%E8%85%A6%E5%88%B0%E5%8E%9F%E5%BB%A0%E7%B6%AD%E4%BF%AE%E7%AB%99%EF%BC%8C%E6%88%91%E5%80%91%E7%A8%B1RMA-Return-Merchandise-Authorization"><span class="nav-number">1.</span> <span class="nav-text">消費者在保固期間內返修電腦到原廠維修站，我們稱RMA(Return Merchandise Authorization)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#RMA-Shim"><span class="nav-number">2.</span> <span class="nav-text">RMA Shim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Troubleshooting-process"><span class="nav-number">3.</span> <span class="nav-text">Troubleshooting process</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -337,11 +337,11 @@
         </a>
       </div>
       <div class="site-state-item site-state-categories">
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span>
       </div>
       <div class="site-state-item site-state-tags">
-        <span class="site-state-item-count">44</span>
+        <span class="site-state-item-count">42</span>
         <span class="site-state-item-name">tags</span>
       </div>
   </nav>
