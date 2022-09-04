@@ -154,7 +154,7 @@ var themeMenus = {};
         
           <section id="main">
   
-    <article id="post-20210915"  class="article article-type-post" itemscope itemprop="blogPost" >
+    <article id="post-20210914"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -162,7 +162,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/hexotestsite/2021/09/14/20210915/">常見Error當導入MySQL Workbench</a>
+      <a class="article-title" href="/hexotestsite/2021/09/14/20210914/">實作Number Detection</a>
     </h1>
   
 
@@ -170,7 +170,7 @@ var themeMenus = {};
     
     <div class="article-meta">
       
-	Posted on <a href="/hexotestsite/2021/09/14/20210915/" class="article-date">
+	Posted on <a href="/hexotestsite/2021/09/14/20210914/" class="article-date">
 	  <time datetime="2021-09-13T16:00:00.000Z" itemprop="datePublished">September 14, 2021</time>
 	</a>
 
@@ -182,20 +182,16 @@ var themeMenus = {};
 
           
             <div class="entry-summary" style="margin-left:0;">
-            出現錯誤：error code:1366. incorrect string value
+            本篇介紹簡易的number detection
 
+實作資料庫：mnist
 
-
-Condition: 如果執行1ALTER TABLE `student` default character set utf8; #utf8mb4
-格式一可能沒變，一樣是latin1
-Solution: you can run the following code to check it again.輸入以下指令，設定格式latin1為 utf812ALTER TABLE `student` convert to character set utf8; #utf8mb4show create table `student`;
-
-
+12345678import numpy as npfrom keras.models import Sequentialfrom keras.datasets import mnistfrom keras.layers import Dense, Dropout, Activation, Flattenfrom keras.utils import np_utils #用來後續將label標籤轉換為one-hot-encodingfrom matplotlib import pyplot as plt#載入mnist 資料庫訓練資料，並自動分為 訓練組 以及 測試組(X_train, y_train), (X...
           
 
         
           <p class="article-more-link">
-            <a href="/hexotestsite/2021/09/14/20210915/#more">Continue Reading →</a>
+            <a href="/hexotestsite/2021/09/14/20210914/#more">Continue Reading →</a>
           </p>
         </div>
       
