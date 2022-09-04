@@ -10,21 +10,21 @@
   <!-- PACE Progress Bar START -->
 
   
-  <title>20220904 | Tiffany&#39;s Blog</title>
+  <title>leetcode-longest substring without repeating characters | Tiffany&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
   
-  <meta name="description" content="Sharing experiences and learning from work as an business-graduated engineer">
+  <meta name="description" content="Given a string s, find the length of the longest substring without repeating characters. Example 1: 123Input: s &#x3D; &quot;abcabcbb&quot;Output: 3Explanation: The answer is &quot;abc&quot;, with the leng">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20220904">
+<meta property="og:title" content="LeetCode-Longest Substring Without Repeating Characters">
 <meta property="og:url" content="https://yunchenli.github.io/hexotestsite/2022/09/04/20220904/index.html">
 <meta property="og:site_name" content="Tiffany&#39;s Blog">
-<meta property="og:description" content="Sharing experiences and learning from work as an business-graduated engineer">
+<meta property="og:description" content="Given a string s, find the length of the longest substring without repeating characters. Example 1: 123Input: s &#x3D; &quot;abcabcbb&quot;Output: 3Explanation: The answer is &quot;abc&quot;, with the leng">
 <meta property="og:locale" content="eh_TW">
 <meta property="article:published_time" content="2022-09-04T12:20:04.000Z">
-<meta property="article:modified_time" content="2022-09-04T12:20:04.397Z">
+<meta property="article:modified_time" content="2022-09-04T12:52:20.294Z">
 <meta property="article:author" content="YUNCHENLI">
 <meta name="twitter:card" content="summary">
   
@@ -162,7 +162,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      20220904
+      LeetCode-Longest Substring Without Repeating Characters
     </h1>
   
 
@@ -182,7 +182,13 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>Given a string s, find the length of the longest substring without repeating characters.</p>
+<p><strong>Example 1:</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Input: s = &quot;abcabcbb&quot;</span><br><span class="line">Output: 3</span><br><span class="line">Explanation: The answer is &quot;abc&quot;, with the length of 3.</span><br></pre></td></tr></table></figure>
+
+<span id="more"></span>
+
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">class Solution:</span><br><span class="line">    def lengthOfLongestSubstring(self, s: str) -&gt; int:</span><br><span class="line"></span><br><span class="line">        dic, res, start, = &#123;&#125;, 0, 0</span><br><span class="line">        for i, ch in enumerate(s):</span><br><span class="line">            # when char already in dictionary</span><br><span class="line">            if ch in dic:</span><br><span class="line">                # check length from start of string to index</span><br><span class="line">                res = max(res, i-start)</span><br><span class="line">                # update start of string index to the next index</span><br><span class="line">                start = max(start, dic[ch]+1)</span><br><span class="line">            # add/update char to/of dictionary </span><br><span class="line">            dic[ch] = i</span><br><span class="line">        # answer is either in the begining/middle OR some mid to the end of string</span><br><span class="line">        return max(res, len(s)-start)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="entry-meta entry-footer">
