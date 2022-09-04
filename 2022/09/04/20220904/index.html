@@ -10,33 +10,23 @@
   <!-- PACE Progress Bar START -->
 
   
-  <title>test || how create/execute shell script in linux? | Tiffany&#39;s Blog</title>
+  <title>20220904 | Tiffany&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="keywords" content="LinuxShell script" />
   
   
   
-  
-  <meta name="description" content="This purpose of this article is for testing my simple shell script in Linux. Steps:  Create a simple shell script Execiting script shell in terminal  It’s simple. Let’s get started!">
+  <meta name="description" content="Sharing experiences and learning from work as an business-graduated engineer">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Test || How Create&#x2F;Execute Shell Script in Linux?">
-<meta property="og:url" content="https://yunchenli.github.io/hexotestsite/2021/12/05/20211201/index.html">
+<meta property="og:title" content="20220904">
+<meta property="og:url" content="https://yunchenli.github.io/hexotestsite/2022/09/04/20220904/index.html">
 <meta property="og:site_name" content="Tiffany&#39;s Blog">
-<meta property="og:description" content="This purpose of this article is for testing my simple shell script in Linux. Steps:  Create a simple shell script Execiting script shell in terminal  It’s simple. Let’s get started!">
+<meta property="og:description" content="Sharing experiences and learning from work as an business-graduated engineer">
 <meta property="og:locale" content="eh_TW">
-<meta property="og:image" content="https://i.imgur.com/5KXaWXu.png?40*40">
-<meta property="og:image" content="https://i.imgur.com/m2cgB8w.png?40*40">
-<meta property="og:image" content="https://i.imgur.com/QIN20LK.png?40*40">
-<meta property="og:image" content="https://i.imgur.com/UoAWcSZ.png?2?40*40">
-<meta property="og:image" content="https://i.imgur.com/QYY7pRc.png?40*40">
-<meta property="article:published_time" content="2021-12-04T16:00:00.000Z">
-<meta property="article:modified_time" content="2021-12-05T03:40:44.833Z">
+<meta property="article:published_time" content="2022-09-04T12:20:04.000Z">
+<meta property="article:modified_time" content="2022-09-04T12:20:04.397Z">
 <meta property="article:author" content="YUNCHENLI">
-<meta property="article:tag" content="Linux">
-<meta property="article:tag" content="Shell script">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://i.imgur.com/5KXaWXu.png?40*40">
   
     <link rel="alternate" href="/atom.xml" title="Tiffany&#39;s Blog" type="application/atom+xml">
   
@@ -164,7 +154,7 @@ var themeMenus = {};
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;"><article id="post-20211201" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+          <section id="main" style="float:none;"><article id="post-20220904" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
     
@@ -172,7 +162,7 @@ var themeMenus = {};
         
   
     <h1 class="thumb" class="article-title" itemprop="name">
-      Test || How Create/Execute Shell Script in Linux?
+      20220904
     </h1>
   
 
@@ -180,8 +170,8 @@ var themeMenus = {};
     
     <div class="article-meta">
       
-	Posted on <a href="/hexotestsite/2021/12/05/20211201/" class="article-date">
-	  <time datetime="2021-12-04T16:00:00.000Z" itemprop="datePublished">December 5, 2021</time>
+	Posted on <a href="/hexotestsite/2022/09/04/20220904/" class="article-date">
+	  <time datetime="2022-09-04T12:20:04.000Z" itemprop="datePublished">September 4, 2022</time>
 	</a>
 
       
@@ -192,44 +182,12 @@ var themeMenus = {};
     </div>
     <div class="article-entry" itemprop="articleBody">
       
-        <p>This purpose of this article is for testing my simple shell script in Linux.</p>
-<p><strong>Steps:</strong></p>
-<ol>
-<li>Create a simple shell script</li>
-<li>Execiting script shell in terminal</li>
-</ol>
-<p>It’s simple. Let’s get started!</p>
-<span id="more"></span>
-<h2 id="Create-a-simple-shell-script"><a href="#Create-a-simple-shell-script" class="headerlink" title="Create a simple shell script"></a>Create a simple shell script</h2><h3 id="To-craete-a-shell-script-vim-name"><a href="#To-craete-a-shell-script-vim-name" class="headerlink" title="To craete a shell script: vim name"></a>To craete a shell script: vim <em>name</em></h3><ul>
-<li>You can type below examples for testing your script.</li>
-</ul>
-<p><strong>Note: “vim” provides another verifications of programming language comapred with “vi”. Although you can use both to create your shell script.</strong></p>
-<p><strong>Example 1:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;Hello $USER.&quot;</span><br><span class="line">echo &quot;Today is $(date)&quot;</span><br><span class="line">echo &quot;Current working directory : $(pwd)&quot;</span><br></pre></td></tr></table></figure>
-
-<p><strong>Example 2:</strong></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">echo &quot;What is your name?&quot;</span><br><span class="line">read name</span><br><span class="line">echo &quot;How do you do, $name?&quot;</span><br><span class="line">read remark</span><br><span class="line">echo &quot;I am $remark too!&quot;</span><br></pre></td></tr></table></figure>
-<p><img src="https://i.imgur.com/5KXaWXu.png?40*40" alt="Create script"></p>
-<ul>
-<li>After typing your shell script, save it.</li>
-</ul>
-<h3 id="To-save-it-press-“Esc”-to-exit-the-insert-mode-and-type-“-w”-to-save-the-script"><a href="#To-save-it-press-“Esc”-to-exit-the-insert-mode-and-type-“-w”-to-save-the-script" class="headerlink" title="To save it, press “Esc” to exit the insert mode and type “:w” to save the script."></a>To save it, press “Esc” to exit the insert mode and type “:w” to save the script.</h3><p><img src="https://i.imgur.com/m2cgB8w.png?40*40" alt=":w - to save"></p>
-<h3 id="Type-“-q”-getting-back-to-the-console-and-execute-the-shell-file-to-show-output-in-the-terminal"><a href="#Type-“-q”-getting-back-to-the-console-and-execute-the-shell-file-to-show-output-in-the-terminal" class="headerlink" title="Type “:q” getting back to the console and execute the shell file to show output in the terminal."></a>Type “:q” getting back to the console and execute the shell file to show output in the terminal.</h3><p><img src="https://i.imgur.com/QIN20LK.png?40*40" alt=":q - to quit"></p>
-<h3 id="“ls”-to-check-if-the-shell-script-had-been-created-successfully"><a href="#“ls”-to-check-if-the-shell-script-had-been-created-successfully" class="headerlink" title="“ls” to check if the shell script had been created successfully."></a>“ls” to check if the shell script had been created successfully.</h3><p><img src="https://i.imgur.com/UoAWcSZ.png?2?40*40" alt="ls - to check script"></p>
-<h2 id="To-execute-a-shell-script"><a href="#To-execute-a-shell-script" class="headerlink" title="To execute a shell script"></a>To execute a shell script</h2><h3 id="“bash”-to-execute-the-schell-script"><a href="#“bash”-to-execute-the-schell-script" class="headerlink" title="“bash” to execute the schell script"></a>“bash” to execute the schell script</h3><p><img src="https://i.imgur.com/QYY7pRc.png?40*40" alt="bash - to execute script"></p>
-<p>Follow above simple steps to run your own script. :P</p>
-
+        
       
     </div>
     <footer class="entry-meta entry-footer">
       
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/hexotestsite/categories/Learning/">Learning</a>
-
       
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexotestsite/tags/Linux/" rel="tag">Linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexotestsite/tags/Shell-script/" rel="tag">Shell script</a></li></ul>
-
       
             
       
@@ -263,19 +221,10 @@ var themeMenus = {};
     
 <nav id="article-nav">
   
-    <a href="/hexotestsite/2022/09/04/20220904/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          20220904
-        
-      </div>
-    </a>
   
-  
-    <a href="/hexotestsite/2021/11/29/20211129/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/hexotestsite/2021/12/05/20211201/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">For Beginner || Git and Gerrit</div>
+      <div class="article-nav-title">Test || How Create/Execute Shell Script in Linux?</div>
     </a>
   
 </nav>
@@ -289,7 +238,7 @@ var themeMenus = {};
     <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
     <strong class="toc-title">Contents</strong>
     
-      <ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Create-a-simple-shell-script"><span class="nav-number">1.</span> <span class="nav-text">Create a simple shell script</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#To-craete-a-shell-script-vim-name"><span class="nav-number">1.1.</span> <span class="nav-text">To craete a shell script: vim name</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#To-save-it-press-%E2%80%9CEsc%E2%80%9D-to-exit-the-insert-mode-and-type-%E2%80%9C-w%E2%80%9D-to-save-the-script"><span class="nav-number">1.2.</span> <span class="nav-text">To save it, press “Esc” to exit the insert mode and type “:w” to save the script.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Type-%E2%80%9C-q%E2%80%9D-getting-back-to-the-console-and-execute-the-shell-file-to-show-output-in-the-terminal"><span class="nav-number">1.3.</span> <span class="nav-text">Type “:q” getting back to the console and execute the shell file to show output in the terminal.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9Cls%E2%80%9D-to-check-if-the-shell-script-had-been-created-successfully"><span class="nav-number">1.4.</span> <span class="nav-text">“ls” to check if the shell script had been created successfully.</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#To-execute-a-shell-script"><span class="nav-number">2.</span> <span class="nav-text">To execute a shell script</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%80%9Cbash%E2%80%9D-to-execute-the-schell-script"><span class="nav-number">2.1.</span> <span class="nav-text">“bash” to execute the schell script</span></a></li></ol></li></ol>
+      <ol class="nav">None</ol>
     
     </div>
   </aside>
