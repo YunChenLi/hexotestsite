@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+
+  <!-- PACE Progress Bar START -->
+  
+    
+<script src="https://raw.githubusercontent.com/HubSpot/pace/v1.0.2/pace.min.js"></script>
+
+    
+<link rel="stylesheet" href="https://github.com/HubSpot/pace/raw/master/themes/orange/pace-theme-flash.css">
+
+  
+  
+
+  <!-- PACE Progress Bar START -->
+
+  
+  <title>tensorflow || what is tensors? | Tiffany&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  <meta name="keywords" content="PythonTensorflow" />
+  
+  
+  
+  
+  <meta name="description" content="DefinitionTensorflow is a free and open-source software library for machine learning and artificial intelligence.  Features  AutoDifferentiation Eager execution Distribute Losses Metrics TF.nn Optimiz">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Tensorflow || What is tensors?">
+<meta property="og:url" content="https://yunchenli.github.io/hexotestsite/2021/11/11/20211111/index.html">
+<meta property="og:site_name" content="Tiffany&#39;s Blog">
+<meta property="og:description" content="DefinitionTensorflow is a free and open-source software library for machine learning and artificial intelligence.  Features  AutoDifferentiation Eager execution Distribute Losses Metrics TF.nn Optimiz">
+<meta property="og:locale" content="eh_TW">
+<meta property="article:published_time" content="2021-11-10T16:00:00.000Z">
+<meta property="article:modified_time" content="2021-11-29T08:58:52.433Z">
+<meta property="article:author" content="YUNCHENLI">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="Tensorflow">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Tiffany&#39;s Blog" type="application/atom+xml">
+  
+  <link rel="icon" href="/hexotestsite/css/images/favicon.ico">
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic" rel="stylesheet" type="text/css">
+  <link href="https://cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/9749f0/00000000000000000001008f/27/l?subset_id=2&fvd=n5) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/90cf9f/000000000000000000010091/27/l?subset_id=2&fvd=n7) format("woff2");font-weight:500;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/8a5494/000000000000000000013365/27/l?subset_id=2&fvd=n4) format("woff2");font-weight:lighter;font-style:normal;}
+    @font-face{font-family:futura-pt;src:url(https://use.typekit.net/af/d337d8/000000000000000000010095/27/l?subset_id=2&fvd=i4) format("woff2");font-weight:400;font-style:italic;}</style>
+    
+  <link rel="stylesheet" id="athemes-headings-fonts-css" href="//fonts.googleapis.com/css?family=Yanone+Kaffeesatz%3A200%2C300%2C400%2C700&amp;ver=4.6.1" type="text/css" media="all">
+  
+<link rel="stylesheet" href="/hexotestsite/css/style.css">
+
+
+  
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" >
+  <link rel="stylesheet" href="/hexotestsite/css/hiero.css" >
+  <link rel="stylesheet" href="/hexotestsite/css/glyphs.css" >
+  
+
+  <!-- Custom CSS -->
+  
+<link rel="stylesheet" href="/hexotestsite/css/my.css">
+
+  <!-- Google Adsense -->
+  
+  <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script>
+      (adsbygoogle = window.adsbygoogle || []).push({
+          google_ad_client: "ca-pub-0123456789ABCDEF",
+          enable_page_level_ads: true
+      });
+  </script>
+  
+<meta name="generator" content="Hexo 6.2.0"></head>
+
+<script>
+var themeMenus = {};
+
+  themeMenus["/hexotestsite/"] = "Home"; 
+
+  themeMenus["/hexotestsite/archives"] = "Archives"; 
+
+  themeMenus["/hexotestsite/categories"] = "Categories"; 
+
+  themeMenus["/hexotestsite/tags"] = "Tags"; 
+
+  themeMenus["/hexotestsite/about"] = "About"; 
+
+</script>
+
+
+  <body data-spy="scroll" data-target="#toc" data-offset="50">
+
+
+  <header id="allheader" class="site-header" role="banner">
+  <div class="clearfix container">
+      <div class="site-branding">
+
+          <h1 class="site-title">
+            
+              <a href="/hexotestsite/" rel="home" >
+                <img style="margin-bottom: 10px;"  width="124px" height="124px" alt="Hike News" src="https://hexo.io/logo.svg">
+              </a>
+            
+          </h1>
+
+          
+            <div class="site-description">Sharing experiences and learning from work as an business-graduated engineer</div>
+          
+            
+          <nav id="main-navigation" class="main-navigation" role="navigation">
+            <a class="nav-open">Menu</a>
+            <a class="nav-close">Close</a>
+            <div class="clearfix sf-menu">
+
+              <ul id="main-nav" class="nmenu sf-js-enabled">
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/hexotestsite/">Home</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/hexotestsite/archives">Archives</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/hexotestsite/categories">Categories</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/hexotestsite/tags">Tags</a> </li>
+                    
+                      <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-1663"> <a class="" href="/hexotestsite/about">About</a> </li>
+                    
+              </ul>
+            </div>
+          </nav>
+
+
+      </div>
+  </div>
+</header>
+
+
+  <div id="originBgDiv" style="background: #fff; width: 100%;">
+
+      <div style="max-height:600px; overflow: hidden;  display: flex; display: -webkit-flex; align-items: center;">
+        <img id="originBg" width="100%" alt="" src="">
+      </div>
+
+  </div>
+
+  <script>
+  function setAboutIMG(){
+      var imgUrls = "css/images/pose.jpg,https://source.unsplash.com/collection/954550/1920x1080".split(",");
+      var random = Math.floor((Math.random() * imgUrls.length ));
+      if (imgUrls[random].startsWith('http') || imgUrls[random].indexOf('://') >= 0) {
+        document.getElementById("originBg").src=imgUrls[random];
+      } else {
+        document.getElementById("originBg").src='/hexotestsite/' + imgUrls[random];
+      }
+  }
+  bgDiv=document.getElementById("originBgDiv");
+  if(location.pathname.match('about')){
+    setAboutIMG();
+    bgDiv.style.display='block';
+  }else{
+    bgDiv.style.display='none';
+  }
+  </script>
+
+
+
+  <div id="container">
+    <div id="wrap">
+            
+      <div id="content" class="outer">
+        
+          <section id="main" style="float:none;"><article id="post-20211111" style="width: 66%; float:left;" class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" class="article-title" itemprop="name">
+      Tensorflow || What is tensors?
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/hexotestsite/2021/11/11/20211111/" class="article-date">
+	  <time datetime="2021-11-10T16:00:00.000Z" itemprop="datePublished">November 11, 2021</time>
+	</a>
+
+      
+	<span id="busuanzi_container_page_pv">
+	  本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+	</span>
+
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><strong>Definition</strong><br>Tensorflow is a free and open-source software library for <strong>machine learning</strong> and <strong>artificial intelligence</strong>. </p>
+<p><strong>Features</strong></p>
+<ul>
+<li>AutoDifferentiation</li>
+<li>Eager execution</li>
+<li>Distribute</li>
+<li>Losses</li>
+<li>Metrics</li>
+<li>TF.nn</li>
+<li>Optimizers</li>
+</ul>
+<p><strong>Applications</strong><br>TensorFlow is available on 64-bit Linux, macOS, Windows, and mobile computing platforms including Android and iOS.</p>
+<p>Before staring this session, you can import tensorflow and check current version at the first time.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import tensorflow as tf</span><br><span class="line">print(tf.__version__)</span><br></pre></td></tr></table></figure>
+<span id="more"></span>
+
+<h3 id="What-is-‘tensors’"><a href="#What-is-‘tensors’" class="headerlink" title="What is ‘tensors’?"></a>What is ‘tensors’?</h3><ul>
+<li>Scalar: a single number</li>
+<li>Vecotr: a number with direction ( e.g. wind speed and direction)</li>
+<li>Matrix: a 2-dimentional array of numbers</li>
+<li><strong>Tensor</strong> : a n-dimentional array of numbers (when n can be any number, a 0-dimentional tensor is a scalar, a 1-dimentional tensor is a vector)</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#Create tensors with tf.constant()</span><br><span class="line"></span><br><span class="line">scalar = tf.constant(7)</span><br></pre></td></tr></table></figure>
+<p>#Create tensors with tf.constant()</p>
+<p>scalar &#x3D; tf.constant(7)<br>scalar</p>
+<h1 id="check-the-number-of-dimensions-of-a-tensor-ndim-stands-for-number-of-dimensions"><a href="#check-the-number-of-dimensions-of-a-tensor-ndim-stands-for-number-of-dimensions" class="headerlink" title="check the number of dimensions of a tensor (ndim stands for number of dimensions)"></a>check the number of dimensions of a tensor (ndim stands for number of dimensions)</h1><p>scalar.ndim</p>
+<h1 id="Create-a-vector"><a href="#Create-a-vector" class="headerlink" title="Create a vector"></a>Create a vector</h1><p>vector &#x3D; tf.constant([10, 10])<br>vector</p>
+<h1 id="Create-the-dimension-of-our-vector"><a href="#Create-the-dimension-of-our-vector" class="headerlink" title="Create the dimension of our vector"></a>Create the dimension of our vector</h1><p>vector.ndim</p>
+<h1 id="Create-a-matrix-has-more-than-1-dimension"><a href="#Create-a-matrix-has-more-than-1-dimension" class="headerlink" title="Create a matrix (has more than 1 dimension)"></a>Create a matrix (has more than 1 dimension)</h1><p>matrix &#x3D; tf.constant([[10, 7], [7, 10]])<br>matrix</p>
+<p>matrix.ndim</p>
+<h1 id="Create-another-matrix"><a href="#Create-another-matrix" class="headerlink" title="Create another matrix"></a>Create another matrix</h1><p>another_matrix &#x3D; tf.constant([[10., 7.], [3., 2.],[8., 9.]], dtype &#x3D; tf.float16) # specify the data type with dtype parameter</p>
+<p>another_matrix</p>
+<p>another_matrix.ndim</p>
+<h1 id="Let’s-create-a-tensor"><a href="#Let’s-create-a-tensor" class="headerlink" title="Let’s create a tensor"></a>Let’s create a tensor</h1><p>tensor &#x3D; tf.constant([[[1, 2, 3],<br>                       [4, 5, 6]],<br>                       [[7, 8, 9],<br>                        [10, 11, 12]],<br>                       [[13, 14, 15],<br>                       [16, 17, 18]]])<br>tensor</p>
+<p>tensor.ndim</p>
+<p>What we’ve created so far:</p>
+<ul>
+<li>Scalar: a single number</li>
+<li>Vecotr: a number with direction ( e.g. wind speed and direction)</li>
+<li>Matrix: a 2-dimentional array of numbers</li>
+<li>Tensor: a n-dimentional array of numbers (when n can be any number, a 0-dimentional tensor is a scalar, a 1-dimentional tensor is a vector)</li>
+</ul>
+<h3 id="Creating-tensors-with-tf-Variable"><a href="#Creating-tensors-with-tf-Variable" class="headerlink" title="Creating tensors with tf.Variable"></a>Creating tensors with <code>tf.Variable</code></h3><p>tf.Variable</p>
+<h1 id="Create-the-same-tensor-with-tf-Variable-as-above"><a href="#Create-the-same-tensor-with-tf-Variable-as-above" class="headerlink" title="Create the same tensor with tf.Variable() as above"></a>Create the same tensor with tf.Variable() as above</h1><p>import tensorflow as tf<br>changeable_tensor &#x3D; tf.Variable([10, 7])<br>unchangeable_tensor &#x3D; tf.constant([10, 7])</p>
+<p>changeable_tensor, unchangeable_tensor</p>
+<h1 id="Let’s-try-change-one-of-the-elements-in-our-changeable-tensor"><a href="#Let’s-try-change-one-of-the-elements-in-our-changeable-tensor" class="headerlink" title="Let’s try change one of the elements in our changeable tensor"></a>Let’s try change one of the elements in our changeable tensor</h1><p>changeable_tensor[1].assign(8)<br>changeable_tensor</p>
+<h1 id="Let’s-try-unchangeable-tensor"><a href="#Let’s-try-unchangeable-tensor" class="headerlink" title="Let’s try unchangeable tensor"></a>Let’s try unchangeable tensor</h1><p>unchangeable_tensor[0].assign(8)<br>unchangeable_tensor</p>
+<h3 id="Create-random-tensor"><a href="#Create-random-tensor" class="headerlink" title="Create random tensor"></a>Create random tensor</h3><p>Random tensors are tensors of some abitrary size which contain random numbers.</p>
+<h1 id="Create-two-random-but-the-same-tensors"><a href="#Create-two-random-but-the-same-tensors" class="headerlink" title="Create two random (but the same) tensors"></a>Create two random (but the same) tensors</h1><p>random_1 &#x3D; tf.random.Generator.from_seed(5)  # set seed for reproducibility<br>random_1 &#x3D; random_1.normal(shape&#x3D;(3, 2))#<br>random_2 &#x3D; tf.random.Generator.from_seed(5) # random.normal &#x3D; random w&#x2F; normal distribution<br>random_2 &#x3D; random_2.normal(shape &#x3D; (3, 2))</p>
+<p>random_1, random_2</p>
+<h1 id="are-they-equal"><a href="#are-they-equal" class="headerlink" title="are they equal"></a>are they equal</h1><p>random_1, random_2, random_1 &#x3D;&#x3D; random_2</p>
+<h3 id="Shuffle-the-order-of-elements-in-a-tensor"><a href="#Shuffle-the-order-of-elements-in-a-tensor" class="headerlink" title="Shuffle the order of elements in a tensor"></a>Shuffle the order of elements in a tensor</h3><h1 id="Shuffle-a-tensor-valuable-for-when-you-want-to-shuffle-your-data-so-the-inherent-order-doesn’t-effect-learning"><a href="#Shuffle-a-tensor-valuable-for-when-you-want-to-shuffle-your-data-so-the-inherent-order-doesn’t-effect-learning" class="headerlink" title="Shuffle a tensor (valuable for when you want to shuffle your data so the inherent order doesn’t effect learning)"></a>Shuffle a tensor (valuable for when you want to shuffle your data so the inherent order doesn’t effect learning)</h1><p>not_shuffled &#x3D; tf.constant([[10, 7],<br>                            [3, 4],<br>                            [2, 7]])</p>
+<h1 id="Shuffle-our-non-shuffled-tensors"><a href="#Shuffle-our-non-shuffled-tensors" class="headerlink" title="Shuffle our non-shuffled tensors"></a>Shuffle our non-shuffled tensors</h1><p>tf.random.shuffle(not_shuffled)</p>
+<h1 id="Shuffle-our-non-shuffled-tensors-1"><a href="#Shuffle-our-non-shuffled-tensors-1" class="headerlink" title="Shuffle our non-shuffled tensors"></a>Shuffle our non-shuffled tensors</h1><p>tf.random.set_seed(42) # global level seed<br>tf.random.shuffle(not_shuffled, seed &#x3D; 42) # operation level seed</p>
+<h1 id="if-both-global-and-operation-seed-are-set-Both-seeds-are-used-in-conjunction-to-determine-the-random-sequence"><a href="#if-both-global-and-operation-seed-are-set-Both-seeds-are-used-in-conjunction-to-determine-the-random-sequence" class="headerlink" title="if both global and operation seed are set: Both seeds are used in conjunction to determine the random sequence"></a>if both global and operation seed are set: Both seeds are used in conjunction to determine the random sequence</h1><p><strong>Exercise:</strong> Read through Tensorflow doc on random seed generation:<br><a target="_blank" rel="noopener" href="https://www.tensorflow.org/api_docs/python/tf/random/set_seed">https://www.tensorflow.org/api_docs/python/tf/random/set_seed</a> </p>
+<p>tf.random.set_seed(1234)<br>print(tf.random.uniform([1], seed &#x3D; 42))  # generates ‘A1’<br>print(tf.random.uniform([1]))  # generates ‘A2’</p>
+<p>tf.random.set_seed(1234)</p>
+<p>@tf.function<br>def f():<br>  a &#x3D; tf.random.uniform([1])<br>  b &#x3D; tf.random.uniform([1])<br>  return a, b</p>
+<p>@tf.function<br>def g():<br>  a &#x3D; tf.random.uniform([1])<br>  b &#x3D; tf.random.uniform([1])<br>  return a, b</p>
+<p>print(f())  # prints ‘(A1, A2)’<br>print(g())  # prints ‘(A1, A2)’</p>
+<p>import tensorflow as tf</p>
+<p>not_shuffled &#x3D; tf.constant([[10, 7],<br>                            [3, 4],<br>                            [2, 7]])<br>tf.random.set_seed(42) # if we set global random seed, we cam the same order at every time<br>tf.random.shuffle(not_shuffled, seed &#x3D; 42) # if we set operation-level random seed, we get different order every time.</p>
+<h3 id="Other-ways-to-get-tensors"><a href="#Other-ways-to-get-tensors" class="headerlink" title="Other ways to get tensors"></a>Other ways to get tensors</h3><p>tf.ones</p>
+<p>tf.ones([10, 7])</p>
+<h1 id="Create-a-tensor-w-x2F-all-zeros"><a href="#Create-a-tensor-w-x2F-all-zeros" class="headerlink" title="Create a tensor w&#x2F; all zeros"></a>Create a tensor w&#x2F; all zeros</h1><p>tf.zeros([10, 7])</p>
+<h1 id="You-can-also-turn-numPy-arrays-into-tensors"><a href="#You-can-also-turn-numPy-arrays-into-tensors" class="headerlink" title="You can also turn numPy arrays into tensors"></a>You can also turn numPy arrays into tensors</h1><h3 id="Turn-NumPy-arrays-into-tensors"><a href="#Turn-NumPy-arrays-into-tensors" class="headerlink" title="Turn NumPy arrays into tensors"></a>Turn NumPy arrays into tensors</h3><p>the main difference between Numpy and tensorflow tensors is that tensors can be run on a GPU computing.</p>
+<p>import numpy as np<br>numpy_A &#x3D; np.arange(1, 25, dtype &#x3D; np.int32) # Create a NumPy array between 1 and 25<br>numpy_A</p>
+<h1 id="X-x3D-tf-constant-some-matrix-capital-for-matrix"><a href="#X-x3D-tf-constant-some-matrix-capital-for-matrix" class="headerlink" title="X &#x3D; tf.constant(some_matrix) # capital for matrix"></a>X &#x3D; tf.constant(some_matrix) # capital for matrix</h1><h1 id="Y-x3D-tf-constant-vector-non-capital-for-vector"><a href="#Y-x3D-tf-constant-vector-non-capital-for-vector" class="headerlink" title="Y &#x3D; tf.constant(vector) # non-capital for vector"></a>Y &#x3D; tf.constant(vector) # non-capital for vector</h1><p>A &#x3D; tf.constant(numpy_A, shape&#x3D;(2 ,3, 4))<br>B &#x3D; tf.constant(numpy_A)<br>C &#x3D; tf.constant(numpy_A, shape&#x3D;(3, 8))<br>D &#x3D; tf.constant(numpy_A, shape&#x3D;(2,12))<br>A, B, C<br>A.ndim, B.ndim, C.ndim, D.ndim<br>tf.size(A)</p>
+<h3 id="Getting-information-from-tensors"><a href="#Getting-information-from-tensors" class="headerlink" title="Getting information from tensors"></a>Getting information from tensors</h3><ul>
+<li>Shape: tensor.shape</li>
+<li>Rank: tensor.ndim</li>
+<li>Axis or dimenson: tensor[0], tensor[:, 1]</li>
+<li>Size: tf.size(tensor)</li>
+</ul>
+<h1 id="Create-a-rank-4-tensor"><a href="#Create-a-rank-4-tensor" class="headerlink" title="Create a rank 4 tensor"></a>Create a rank 4 tensor</h1><p>rank_4_tensor &#x3D; tf.zeros(shape&#x3D;[2, 3, 4, 5])<br>rank_4_tensor[0]</p>
+<p>rank_4_tensor.ndim, tf.size(rank_4_tensor), rank_4_tensor.shape # numpy &#x3D; 2<em>3</em>4*5&#x3D;120</p>
+<h1 id="Get-various-attributes-of-our-tensor"><a href="#Get-various-attributes-of-our-tensor" class="headerlink" title="Get various attributes of our tensor"></a>Get various attributes of our tensor</h1><p>print(“Datatype of every element:”, rank_4_tensor.dtype)<br>print(“Number of dimensions (rank):”, rank_4_tensor.ndim)<br>print(“Shape of tensor:”, rank_4_tensor.shape)<br>print(“Elements along the 0 axis:”, rank_4_tensor.shape[0])<br>print(“Elements along the last axis:”, rank_4_tensor.shape[-1]) #last axis<br>print(“Total number of elements in our tensor:”, tf.size(rank_4_tensor))<br>print(“Total number of elements in our tensor:”, tf.size(rank_4_tensor).numpy())<br>print(“Total number of elements in our tensor:”, tf.size(rank_4_tensor).dtype)</p>
+<h3 id="Indexing-tensors"><a href="#Indexing-tensors" class="headerlink" title="Indexing tensors"></a>Indexing tensors</h3><p>tensors can be indexed just like python lists.</p>
+<h1 id="Get-the-first-two-elements-of-each-dimensions"><a href="#Get-the-first-two-elements-of-each-dimensions" class="headerlink" title="Get the first two elements of each dimensions"></a>Get the first two elements of each dimensions</h1><p>rank_4_tensor[:2, :2, :2, :2]</p>
+<h1 id="Get-the-first-element-from-each-dimension-from-each-index-except-for-the-final-one"><a href="#Get-the-first-element-from-each-dimension-from-each-index-except-for-the-final-one" class="headerlink" title="Get the first element from each dimension from each index except for the final one"></a>Get the first element from each dimension from each index except for the final one</h1><p>rank_4_tensor[:1, :1, :1, :]<br>rank_4_tensor[:, :1, :1, :1]</p>
+<h1 id="Create-a-rank-2-tensors"><a href="#Create-a-rank-2-tensors" class="headerlink" title="Create a rank 2 tensors"></a>Create a rank 2 tensors</h1><p>rank_2_tensor &#x3D; tf.constant([[10, 7],<br>                            [2, 3]])<br>rank_2_tensor, rank_2_tensor.shape, rank_2_tensor[:,-1]</p>
+<h1 id="Add-dimensions-tf-newaxis-tf-expand-dims"><a href="#Add-dimensions-tf-newaxis-tf-expand-dims" class="headerlink" title="Add dimensions (tf.newaxis, tf.expand_dims)"></a>Add dimensions (tf.newaxis, tf.expand_dims)</h1><p>rank_3_tensor &#x3D; rank_2_tensor[…, tf.newaxis]<br>rank_3_tensor, tf.expand_dims(rank_2_tensor, axis &#x3D; -1) # “-1” means expand the final axis</p>
+<h3 id="Manipulagting-tensors-tensor-operations"><a href="#Manipulagting-tensors-tensor-operations" class="headerlink" title="Manipulagting tensors(tensor operations)"></a>Manipulagting tensors(tensor operations)</h3><p>** Basic operations **</p>
+<p><code>+</code>, <code>-</code>, <code>*</code>, <code>/</code></p>
+<p>tensor &#x3D; tf.constant([[10, 7],[3, 4]])<br>tensor + 10, tensor * 2 # tf.multiply(tensor, 2)</p>
+<h3 id="Matrix-multiplication"><a href="#Matrix-multiplication" class="headerlink" title="Matrix multiplication"></a>Matrix multiplication</h3><p>In ML, matriox multiplication is one of the most common tensor operations.</p>
+<p>** Resource: matrix multiplication: <a target="_blank" rel="noopener" href="https://www.mathsisfun.com/algebra/matrix-multiplying.html">https://www.mathsisfun.com/algebra/matrix-multiplying.html</a></p>
+<ul>
+<li>There are two rules our tensors (or matrices) need to fulfil if we’re going to matrix multiply them:</li>
+</ul>
+<ol>
+<li>the inner dimensions must match</li>
+<li>the resulting matrix has the shape of the outer dimensions</li>
+</ol>
+<p>tensor, tensor @ tensor, tensor * tensor</p>
+<h1 id="Try-to-matrix-multiply-tensors-of-same-shape"><a href="#Try-to-matrix-multiply-tensors-of-same-shape" class="headerlink" title="Try to matrix multiply tensors of same shape"></a>Try to matrix multiply tensors of same shape</h1><p>import tensorflow as tf<br>X &#x3D; tf.constant([[10, 7],<br>                [3, 4]])<br>Y &#x3D; tf.constant([[10, 7],<br>                [3, 4]])</p>
+<p>tf.matmul(X, Y), X @ Y</p>
+<h1 id="Let’s-change-shapoe-tf-reshape-can-do-the-same-with-transpose-tf-transpose"><a href="#Let’s-change-shapoe-tf-reshape-can-do-the-same-with-transpose-tf-transpose" class="headerlink" title="Let’s change shapoe (tf.reshape), can do the same with transpose (tf.transpose)"></a>Let’s change shapoe (tf.reshape), can do the same with transpose (tf.transpose)</h1><p>import tensorflow as tf<br>Z &#x3D; tf.constant([[10,7,4],[2,3,10],[1, 2, 3]])</p>
+<p>X &#x3D; tf.constant([[1,2],<br>                 [3,4],<br>                 [5,6]])<br>X_reshaped &#x3D; tf.reshape(X, shape&#x3D;(2, 3)) # witih same amount of values<br>X_transposed &#x3D; tf.transpose(X)</p>
+<p>X_reshaped @ Z, tf.transpose(X)</p>
+<p>** The dot product**</p>
+<p>Matrix multiplication is also referred to as the dot product.</p>
+<p>You can perform matrix multiplication using:</p>
+<ul>
+<li><code>tf.matmul()</code></li>
+<li><code>tf.tensordot()</code></li>
+</ul>
+<h3 id="Changing-a-new-tensor-with-default-datatype-float32"><a href="#Changing-a-new-tensor-with-default-datatype-float32" class="headerlink" title="Changing a new tensor with default datatype (float32)"></a>Changing a new tensor with default datatype (float32)</h3><p>B &#x3D; tf.constant([1.7, 7.4, 8.6])<br>C &#x3D; tf.constant([1.7])<br>D &#x3D; tf.constant([1, 7])<br>E &#x3D; tf.constant([1., 2.])<br>B, C, D, E</p>
+<h1 id="Change-from-float32-to-float16-tf-cast"><a href="#Change-from-float32-to-float16-tf-cast" class="headerlink" title="Change from float32 to float16 (tf.cast)"></a>Change from float32 to float16 (tf.cast)</h1><p>B &#x3D; tf.cast(B, dtype&#x3D;tf.float16)<br>B</p>
+<p>B.dtype</p>
+<h3 id="Aggregating-tensors"><a href="#Aggregating-tensors" class="headerlink" title="Aggregating tensors"></a>Aggregating tensors</h3><p>Aggregating tensors &#x3D; condensing then from multiple values down to a smaller amount of values</p>
+<h1 id="get-an-absolute-values-tf-abs"><a href="#get-an-absolute-values-tf-abs" class="headerlink" title="get an absolute values (tf.abs)"></a>get an absolute values (tf.abs)</h1><p>F &#x3D; tf.constant([-3, -5])<br>tf.abs(F)</p>
+<h1 id="Create-a-random-tensors-with-values-between-0-and-100-of-size-50"><a href="#Create-a-random-tensors-with-values-between-0-and-100-of-size-50" class="headerlink" title="Create a random tensors with values between 0 and 100 of size 50"></a>Create a random tensors with values between 0 and 100 of size 50</h1><p>import numpy as np<br>G &#x3D; tf.constant(np.random.randint(0, 100, size&#x3D;50))<br>G</p>
+<p>tf.size(G), G.shape, G.ndim</p>
+<h1 id="Find-min-max-mean-sum"><a href="#Find-min-max-mean-sum" class="headerlink" title="Find min, max, mean, sum"></a>Find min, max, mean, sum</h1><p>tf.reduce_min(G), tf.reduce_max(G), tf.reduce_mean(G), tf.reduce_sum(G)</p>
+<h1 id="Find-tfp-stats-variance-tf-math-reduce-std-To-define-variance-of-our-tensor-we-need-access-to-tensorflow-probability"><a href="#Find-tfp-stats-variance-tf-math-reduce-std-To-define-variance-of-our-tensor-we-need-access-to-tensorflow-probability" class="headerlink" title="Find  (tfp.stats.variance, tf.math.reduce_std) - To define variance of our tensor, we need access to tensorflow_probability"></a>Find  (tfp.stats.variance, tf.math.reduce_std) - To define variance of our tensor, we need access to tensorflow_probability</h1><p>import tensorflow_probability as tfp<br>tfp.stats.variance(G), tf.math.reduce_std(tf.cast(G, dtype &#x3D; tf.float32)) # define standard deviation</p>
+<h3 id="Find-the-position-maximum-and-minimum"><a href="#Find-the-position-maximum-and-minimum" class="headerlink" title="Find the position maximum and minimum"></a>Find the position maximum and minimum</h3><h1 id="Create-a-new-tensor-for-finding-positional-min-and-max"><a href="#Create-a-new-tensor-for-finding-positional-min-and-max" class="headerlink" title="Create a new tensor for finding positional min and max"></a>Create a new tensor for finding positional min and max</h1><p>import tensorflow as tf<br>tf.random.set_seed(42)<br>F &#x3D; tf.random.uniform(shape&#x3D;[50])<br>F, tf.argmax(F)</p>
+<h1 id="Index-on-our-largest-value-position"><a href="#Index-on-our-largest-value-position" class="headerlink" title="Index on our largest value position"></a>Index on our largest value position</h1><p>F[tf.argmax(F)]</p>
+<h1 id="Find-the-max-value"><a href="#Find-the-max-value" class="headerlink" title="Find the max value"></a>Find the max value</h1><p>tf.reduce_max(F)</p>
+<h1 id="Check-for-equality"><a href="#Check-for-equality" class="headerlink" title="Check for equality"></a>Check for equality</h1><p>F[tf.argmax(F)] &#x3D;&#x3D; tf.reduce_max(F)</p>
+<h1 id="Find-the-positional-min-min-value"><a href="#Find-the-positional-min-min-value" class="headerlink" title="Find the positional min, min value"></a>Find the positional min, min value</h1><p>tf.argmin(F), F[tf.argmin(F)]</p>
+
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/hexotestsite/categories/Learning/">Learning</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexotestsite/tags/Python/" rel="tag">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexotestsite/tags/Tensorflow/" rel="tag">Tensorflow</a></li></ul>
+
+      
+            
+      
+        
+	<div id="comment">
+		<!-- 来必力City版安装代码 -->
+		<div id="lv-container" data-id="city" data-uid="MTAyMC8yOTQ4MS82MDQ5">
+		<script type="text/javascript">
+		   (function(d, s) {
+		       var j, e = d.getElementsByTagName(s)[0];
+
+		       if (typeof LivereTower === 'function') { return; }
+
+		       j = d.createElement(s);
+		       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+		       j.async = true;
+
+		       e.parentNode.insertBefore(j, e);
+		   })(document, 'script');
+		</script>
+		<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+		</div>
+		<!-- City版安装代码已完成 -->
+	</div>
+
+
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/hexotestsite/2021/11/12/20211112/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Data || Data structure - How to describe your data?
+        
+      </div>
+    </a>
+  
+  
+    <a href="/hexotestsite/2021/11/04/20211104/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Python || How to find duplicates</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+<!-- Table of Contents -->
+
+  <aside id="sidebar">
+    <div id="toc" class="toc-article" style="overflow-y: scroll; max-width: 28%;">
+    <strong class="toc-title">Contents</strong>
+    
+      <ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#What-is-%E2%80%98tensors%E2%80%99"><span class="nav-number">1.</span> <span class="nav-text">What is ‘tensors’?</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#check-the-number-of-dimensions-of-a-tensor-ndim-stands-for-number-of-dimensions"><span class="nav-number"></span> <span class="nav-text">check the number of dimensions of a tensor (ndim stands for number of dimensions)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-a-vector"><span class="nav-number"></span> <span class="nav-text">Create a vector</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-the-dimension-of-our-vector"><span class="nav-number"></span> <span class="nav-text">Create the dimension of our vector</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-a-matrix-has-more-than-1-dimension"><span class="nav-number"></span> <span class="nav-text">Create a matrix (has more than 1 dimension)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-another-matrix"><span class="nav-number"></span> <span class="nav-text">Create another matrix</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Let%E2%80%99s-create-a-tensor"><span class="nav-number"></span> <span class="nav-text">Let’s create a tensor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-tensors-with-tf-Variable"><span class="nav-number">1.</span> <span class="nav-text">Creating tensors with tf.Variable</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-the-same-tensor-with-tf-Variable-as-above"><span class="nav-number"></span> <span class="nav-text">Create the same tensor with tf.Variable() as above</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Let%E2%80%99s-try-change-one-of-the-elements-in-our-changeable-tensor"><span class="nav-number"></span> <span class="nav-text">Let’s try change one of the elements in our changeable tensor</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Let%E2%80%99s-try-unchangeable-tensor"><span class="nav-number"></span> <span class="nav-text">Let’s try unchangeable tensor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-random-tensor"><span class="nav-number">1.</span> <span class="nav-text">Create random tensor</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-two-random-but-the-same-tensors"><span class="nav-number"></span> <span class="nav-text">Create two random (but the same) tensors</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#are-they-equal"><span class="nav-number"></span> <span class="nav-text">are they equal</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Shuffle-the-order-of-elements-in-a-tensor"><span class="nav-number">1.</span> <span class="nav-text">Shuffle the order of elements in a tensor</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Shuffle-a-tensor-valuable-for-when-you-want-to-shuffle-your-data-so-the-inherent-order-doesn%E2%80%99t-effect-learning"><span class="nav-number"></span> <span class="nav-text">Shuffle a tensor (valuable for when you want to shuffle your data so the inherent order doesn’t effect learning)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Shuffle-our-non-shuffled-tensors"><span class="nav-number"></span> <span class="nav-text">Shuffle our non-shuffled tensors</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Shuffle-our-non-shuffled-tensors-1"><span class="nav-number"></span> <span class="nav-text">Shuffle our non-shuffled tensors</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#if-both-global-and-operation-seed-are-set-Both-seeds-are-used-in-conjunction-to-determine-the-random-sequence"><span class="nav-number"></span> <span class="nav-text">if both global and operation seed are set: Both seeds are used in conjunction to determine the random sequence</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Other-ways-to-get-tensors"><span class="nav-number">1.</span> <span class="nav-text">Other ways to get tensors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-a-tensor-w-x2F-all-zeros"><span class="nav-number"></span> <span class="nav-text">Create a tensor w&#x2F; all zeros</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#You-can-also-turn-numPy-arrays-into-tensors"><span class="nav-number"></span> <span class="nav-text">You can also turn numPy arrays into tensors</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Turn-NumPy-arrays-into-tensors"><span class="nav-number">1.</span> <span class="nav-text">Turn NumPy arrays into tensors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#X-x3D-tf-constant-some-matrix-capital-for-matrix"><span class="nav-number"></span> <span class="nav-text">X &#x3D; tf.constant(some_matrix) # capital for matrix</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Y-x3D-tf-constant-vector-non-capital-for-vector"><span class="nav-number"></span> <span class="nav-text">Y &#x3D; tf.constant(vector) # non-capital for vector</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Getting-information-from-tensors"><span class="nav-number">1.</span> <span class="nav-text">Getting information from tensors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-a-rank-4-tensor"><span class="nav-number"></span> <span class="nav-text">Create a rank 4 tensor</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Get-various-attributes-of-our-tensor"><span class="nav-number"></span> <span class="nav-text">Get various attributes of our tensor</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Indexing-tensors"><span class="nav-number">1.</span> <span class="nav-text">Indexing tensors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Get-the-first-two-elements-of-each-dimensions"><span class="nav-number"></span> <span class="nav-text">Get the first two elements of each dimensions</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Get-the-first-element-from-each-dimension-from-each-index-except-for-the-final-one"><span class="nav-number"></span> <span class="nav-text">Get the first element from each dimension from each index except for the final one</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-a-rank-2-tensors"><span class="nav-number"></span> <span class="nav-text">Create a rank 2 tensors</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Add-dimensions-tf-newaxis-tf-expand-dims"><span class="nav-number"></span> <span class="nav-text">Add dimensions (tf.newaxis, tf.expand_dims)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Manipulagting-tensors-tensor-operations"><span class="nav-number">1.</span> <span class="nav-text">Manipulagting tensors(tensor operations)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Matrix-multiplication"><span class="nav-number">2.</span> <span class="nav-text">Matrix multiplication</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Try-to-matrix-multiply-tensors-of-same-shape"><span class="nav-number"></span> <span class="nav-text">Try to matrix multiply tensors of same shape</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Let%E2%80%99s-change-shapoe-tf-reshape-can-do-the-same-with-transpose-tf-transpose"><span class="nav-number"></span> <span class="nav-text">Let’s change shapoe (tf.reshape), can do the same with transpose (tf.transpose)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Changing-a-new-tensor-with-default-datatype-float32"><span class="nav-number">1.</span> <span class="nav-text">Changing a new tensor with default datatype (float32)</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Change-from-float32-to-float16-tf-cast"><span class="nav-number"></span> <span class="nav-text">Change from float32 to float16 (tf.cast)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Aggregating-tensors"><span class="nav-number">1.</span> <span class="nav-text">Aggregating tensors</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#get-an-absolute-values-tf-abs"><span class="nav-number"></span> <span class="nav-text">get an absolute values (tf.abs)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-a-random-tensors-with-values-between-0-and-100-of-size-50"><span class="nav-number"></span> <span class="nav-text">Create a random tensors with values between 0 and 100 of size 50</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Find-min-max-mean-sum"><span class="nav-number"></span> <span class="nav-text">Find min, max, mean, sum</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Find-tfp-stats-variance-tf-math-reduce-std-To-define-variance-of-our-tensor-we-need-access-to-tensorflow-probability"><span class="nav-number"></span> <span class="nav-text">Find  (tfp.stats.variance, tf.math.reduce_std) - To define variance of our tensor, we need access to tensorflow_probability</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Find-the-position-maximum-and-minimum"><span class="nav-number">1.</span> <span class="nav-text">Find the position maximum and minimum</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Create-a-new-tensor-for-finding-positional-min-and-max"><span class="nav-number"></span> <span class="nav-text">Create a new tensor for finding positional min and max</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Index-on-our-largest-value-position"><span class="nav-number"></span> <span class="nav-text">Index on our largest value position</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Find-the-max-value"><span class="nav-number"></span> <span class="nav-text">Find the max value</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Check-for-equality"><span class="nav-number"></span> <span class="nav-text">Check for equality</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Find-the-positional-min-min-value"><span class="nav-number"></span> <span class="nav-text">Find the positional min, min value</span></a>
+    
+    </div>
+  </aside>
+</section>
+        
+      </div>
+      <footer id="footer" class="site-footer">
+  
+
+  <div class="clearfix container">
+      <div class="site-info">
+	      &copy; 2022 Tiffany&#39;s Blog All Rights Reserved.
+          
+            <span id="busuanzi_container_site_uv">
+              本站访客数<span id="busuanzi_value_site_uv"></span>人次  
+              本站总访问量<span id="busuanzi_value_site_pv"></span>次
+            </span>
+          
+      </div>
+      <div class="site-credit">
+        Theme by <a href="https://github.com/iTimeTraveler/hexo-theme-hiero" target="_blank">hiero</a>
+      </div>
+  </div>
+</footer>
+
+
+<!-- min height -->
+
+<script>
+    var contentdiv = document.getElementById("content");
+
+    contentdiv.style.minHeight = document.body.offsetHeight - document.getElementById("allheader").offsetHeight - document.getElementById("footer").offsetHeight + "px";
+</script>
+
+<!-- Custome JS -->
+
+<script src="/hexotestsite/js/my.js"></script>
+
+    </div>
+    <!-- <nav id="mobile-nav">
+  
+    <a href="/hexotestsite/" class="mobile-nav-link">Home</a>
+  
+    <a href="/hexotestsite/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/hexotestsite/categories" class="mobile-nav-link">Categories</a>
+  
+    <a href="/hexotestsite/tags" class="mobile-nav-link">Tags</a>
+  
+    <a href="/hexotestsite/about" class="mobile-nav-link">About</a>
+  
+</nav> -->
+    
+
+<!-- mathjax config similar to math.stackexchange -->
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+      processEscapes: true
+    }
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      }
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+
+  
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/hexotestsite/js/scripts.js"></script>
+
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+<script src="/hexotestsite/js/main.js"></script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="https://s95.cnzz.com/z_stat.php?id=1260716016&web_id=1260716016" language="JavaScript"></script>
+  </div>
+
+
+
+	<script async src="https://dnqof95d40fo6.cloudfront.net/atw7f8.js">
+	</script>
+
+
+
+
+
+
+  </div>
+
+  <a id="rocket" href="#top" class=""></a>
+  <script type="text/javascript" src="/js/totop.js" async=""></script>
+</body>
+</html>
