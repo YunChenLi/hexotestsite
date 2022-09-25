@@ -154,78 +154,6 @@ var themeMenus = {};
         
           <section id="main">
   
-    <article id="post-20211012-2"  class="article article-type-post" itemscope itemprop="blogPost" >
-  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="article-title" href="/hexotestsite/2021/10/12/20211012-2/">修正模型：減少模型Overfitting</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-meta">
-      
-	Posted on <a href="/hexotestsite/2021/10/12/20211012-2/" class="article-date">
-	  <time datetime="2021-10-11T16:00:00.000Z" itemprop="datePublished">October 12, 2021</time>
-	</a>
-
-      
-    </div>
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-
-          
-            <div class="entry-summary" style="margin-left:0;">
-            在搭載神經元網絡開始訓練模型同時，可能會面臨平常都執行得好好的，為何在評估資料時卻沒有達到預期效果？
-
-你可能面臨了『過度配適』（Overfitting)，當模型過度擬合的同時，無法同時達到模型最佳化以及泛化（Generalization).這也是個常見的補償現象。
-
-
-
-
-如果你的模型過度擬合訓練資料（train data)，可以試著降低模型彈性，像是：
-
-特徵選擇：考慮使用較少的特徵組合、減少 n 元語法的大小，以及減少數值屬性分箱數。
-增加使用的正規化數量(Normalization&#x2F;Regularization)
-
-
-          
-
-        
-          <p class="article-more-link">
-            <a href="/hexotestsite/2021/10/12/20211012-2/#more">Continue Reading →</a>
-          </p>
-        </div>
-      
-    </div>
-    <footer class="entry-meta entry-footer">
-      
-	<span class="ico-folder"></span>
-    <a class="article-category-link" href="/hexotestsite/categories/Learning/">Learning</a>
-
-      
-  <span class="ico-tags"></span>
-  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexotestsite/tags/Deep-learning/" rel="tag">Deep learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexotestsite/tags/Machine-learning/" rel="tag">Machine learning</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexotestsite/tags/Python/" rel="tag">Python</a></li></ul>
-
-      
-            
-      
-    </footer>
-  </div>
-  
-</article>
-
-<!-- Table of Contents -->
-
-    
-
-  
     <article id="post-20211012"  class="article article-type-post" itemscope itemprop="blogPost" >
   <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
     
@@ -841,6 +769,70 @@ Tensorflow 包含了一維...
     
 
   
+    <article id="post-20210914"  class="article article-type-post" itemscope itemprop="blogPost" >
+  <div id="articleInner" class="clearfix post-1016 post type-post status-publish format-standard has-post-thumbnail hentry category-template-2 category-uncategorized tag-codex tag-edge-case tag-featured-image tag-image tag-template">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="thumb" itemprop="name">
+      <a class="article-title" href="/hexotestsite/2021/09/14/20210914/">實作Number Detection</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-meta">
+      
+	Posted on <a href="/hexotestsite/2021/09/14/20210914/" class="article-date">
+	  <time datetime="2021-09-13T16:00:00.000Z" itemprop="datePublished">September 14, 2021</time>
+	</a>
+
+      
+    </div>
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+
+          
+            <div class="entry-summary" style="margin-left:0;">
+            本篇介紹簡易的number detection
+
+實作資料庫：mnist
+
+12345678import numpy as npfrom keras.models import Sequentialfrom keras.datasets import mnistfrom keras.layers import Dense, Dropout, Activation, Flattenfrom keras.utils import np_utils #用來後續將label標籤轉換為one-hot-encodingfrom matplotlib import pyplot as plt#載入mnist 資料庫訓練資料，並自動分為 訓練組 以及 測試組(X_train, y_train), (X...
+          
+
+        
+          <p class="article-more-link">
+            <a href="/hexotestsite/2021/09/14/20210914/#more">Continue Reading →</a>
+          </p>
+        </div>
+      
+    </div>
+    <footer class="entry-meta entry-footer">
+      
+	<span class="ico-folder"></span>
+    <a class="article-category-link" href="/hexotestsite/categories/Work/">Work</a>
+
+      
+  <span class="ico-tags"></span>
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexotestsite/tags/Data-visualization/" rel="tag">Data visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/hexotestsite/tags/Python/" rel="tag">Python</a></li></ul>
+
+      
+            
+      
+    </footer>
+  </div>
+  
+</article>
+
+<!-- Table of Contents -->
+
+    
+
+  
 
 
   <nav id="page-nav">
@@ -933,7 +925,7 @@ Tensorflow 包含了一維...
   <div class="widget-wrap">
     <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/AI/" rel="tag">AI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/AR-VR/" rel="tag">AR&#x2F;VR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Apple/" rel="tag">Apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/BigQuery/" rel="tag">BigQuery</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/ChromOSO/" rel="tag">ChromOSO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/ChromeOS/" rel="tag">ChromeOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Chromebook/" rel="tag">Chromebook</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Cloud-integration/" rel="tag">Cloud integration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Data/" rel="tag">Data</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Data-Visulization/" rel="tag">Data Visulization</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Data-flow/" rel="tag">Data flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Data-visualization/" rel="tag">Data visualization</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Deep-learning/" rel="tag">Deep learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Digital-Twins/" rel="tag">Digital Twins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Excel/" rel="tag">Excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Gerrit/" rel="tag">Gerrit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Git/" rel="tag">Git</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Gitfind/" rel="tag">Gitfind</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Github/" rel="tag">Github</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Google-Analytics/" rel="tag">Google Analytics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Hexo-Github-Web/" rel="tag">Hexo, Github, Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/IT/" rel="tag">IT</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Industry-4-0/" rel="tag">Industry 4.0</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Machine-learning/" rel="tag">Machine learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/NPI/" rel="tag">NPI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Non-SQL/" rel="tag">Non SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/PPT/" rel="tag">PPT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Process-flow/" rel="tag">Process flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Product-management/" rel="tag">Product management</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Program-management/" rel="tag">Program management</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Project-management/" rel="tag">Project management</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Python/" rel="tag">Python</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Quality/" rel="tag">Quality</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Quality-management/" rel="tag">Quality management</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/R/" rel="tag">R</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/RMA/" rel="tag">RMA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Roadmap/" rel="tag">Roadmap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/SQL/" rel="tag">SQL</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Schedule/" rel="tag">Schedule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Sharing/" rel="tag">Sharing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Shell-script/" rel="tag">Shell script</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/System-integration/" rel="tag">System integration</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Tensorflow/" rel="tag">Tensorflow</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Toolkit/" rel="tag">Toolkit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Troubleshooting/" rel="tag">Troubleshooting</a><span class="tag-list-count">1</span></li></ul>
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/AI/" rel="tag">AI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/AR-VR/" rel="tag">AR&#x2F;VR</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Apple/" rel="tag">Apple</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/BigQuery/" rel="tag">BigQuery</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/ChromOSO/" rel="tag">ChromOSO</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/ChromeOS/" rel="tag">ChromeOS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Chromebook/" rel="tag">Chromebook</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Cloud-integration/" rel="tag">Cloud integration</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Data/" rel="tag">Data</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Data-Visulization/" rel="tag">Data Visulization</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Data-flow/" rel="tag">Data flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Data-visualization/" rel="tag">Data visualization</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Deep-learning/" rel="tag">Deep learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Digital-Twins/" rel="tag">Digital Twins</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Excel/" rel="tag">Excel</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Git/" rel="tag">Git</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Gitfind/" rel="tag">Gitfind</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Github/" rel="tag">Github</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Google-Analytics/" rel="tag">Google Analytics</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/HTML/" rel="tag">HTML</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Hexo/" rel="tag">Hexo</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Hexo-Github-Web/" rel="tag">Hexo, Github, Web</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/IT/" rel="tag">IT</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Industry-4-0/" rel="tag">Industry 4.0</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Linux/" rel="tag">Linux</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Machine-learning/" rel="tag">Machine learning</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/NPI/" rel="tag">NPI</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Non-SQL/" rel="tag">Non SQL</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/PPT/" rel="tag">PPT</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Process-flow/" rel="tag">Process flow</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Product-management/" rel="tag">Product management</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Program-management/" rel="tag">Program management</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Project-management/" rel="tag">Project management</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Python/" rel="tag">Python</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Quality/" rel="tag">Quality</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Quality-management/" rel="tag">Quality management</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/R/" rel="tag">R</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/RMA/" rel="tag">RMA</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Roadmap/" rel="tag">Roadmap</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/SQL/" rel="tag">SQL</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Schedule/" rel="tag">Schedule</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Sharing/" rel="tag">Sharing</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Shell-script/" rel="tag">Shell script</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/System-integration/" rel="tag">System integration</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Tensorflow/" rel="tag">Tensorflow</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Toolkit/" rel="tag">Toolkit</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/hexotestsite/tags/Troubleshooting/" rel="tag">Troubleshooting</a><span class="tag-list-count">1</span></li></ul>
     </div>
   </div>
 
@@ -943,7 +935,7 @@ Tensorflow 包含了一維...
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/hexotestsite/tags/AI/" style="font-size: 10px;">AI</a> <a href="/hexotestsite/tags/AR-VR/" style="font-size: 10px;">AR/VR</a> <a href="/hexotestsite/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/hexotestsite/tags/BigQuery/" style="font-size: 10px;">BigQuery</a> <a href="/hexotestsite/tags/ChromOSO/" style="font-size: 10px;">ChromOSO</a> <a href="/hexotestsite/tags/ChromeOS/" style="font-size: 14px;">ChromeOS</a> <a href="/hexotestsite/tags/Chromebook/" style="font-size: 12px;">Chromebook</a> <a href="/hexotestsite/tags/Cloud-integration/" style="font-size: 10px;">Cloud integration</a> <a href="/hexotestsite/tags/Data/" style="font-size: 16px;">Data</a> <a href="/hexotestsite/tags/Data-Visulization/" style="font-size: 12px;">Data Visulization</a> <a href="/hexotestsite/tags/Data-flow/" style="font-size: 10px;">Data flow</a> <a href="/hexotestsite/tags/Data-visualization/" style="font-size: 14px;">Data visualization</a> <a href="/hexotestsite/tags/Deep-learning/" style="font-size: 12px;">Deep learning</a> <a href="/hexotestsite/tags/Digital-Twins/" style="font-size: 10px;">Digital Twins</a> <a href="/hexotestsite/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/hexotestsite/tags/Gerrit/" style="font-size: 10px;">Gerrit</a> <a href="/hexotestsite/tags/Git/" style="font-size: 12px;">Git</a> <a href="/hexotestsite/tags/Gitfind/" style="font-size: 10px;">Gitfind</a> <a href="/hexotestsite/tags/Github/" style="font-size: 16px;">Github</a> <a href="/hexotestsite/tags/Google-Analytics/" style="font-size: 10px;">Google Analytics</a> <a href="/hexotestsite/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/hexotestsite/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/hexotestsite/tags/Hexo-Github-Web/" style="font-size: 10px;">Hexo, Github, Web</a> <a href="/hexotestsite/tags/IT/" style="font-size: 18px;">IT</a> <a href="/hexotestsite/tags/Industry-4-0/" style="font-size: 10px;">Industry 4.0</a> <a href="/hexotestsite/tags/Linux/" style="font-size: 14px;">Linux</a> <a href="/hexotestsite/tags/Machine-learning/" style="font-size: 12px;">Machine learning</a> <a href="/hexotestsite/tags/NPI/" style="font-size: 10px;">NPI</a> <a href="/hexotestsite/tags/Non-SQL/" style="font-size: 10px;">Non SQL</a> <a href="/hexotestsite/tags/PPT/" style="font-size: 10px;">PPT</a> <a href="/hexotestsite/tags/Process-flow/" style="font-size: 10px;">Process flow</a> <a href="/hexotestsite/tags/Product-management/" style="font-size: 10px;">Product management</a> <a href="/hexotestsite/tags/Program-management/" style="font-size: 10px;">Program management</a> <a href="/hexotestsite/tags/Project-management/" style="font-size: 18px;">Project management</a> <a href="/hexotestsite/tags/Python/" style="font-size: 20px;">Python</a> <a href="/hexotestsite/tags/Quality/" style="font-size: 10px;">Quality</a> <a href="/hexotestsite/tags/Quality-management/" style="font-size: 10px;">Quality management</a> <a href="/hexotestsite/tags/R/" style="font-size: 10px;">R</a> <a href="/hexotestsite/tags/RMA/" style="font-size: 12px;">RMA</a> <a href="/hexotestsite/tags/Roadmap/" style="font-size: 10px;">Roadmap</a> <a href="/hexotestsite/tags/SQL/" style="font-size: 16px;">SQL</a> <a href="/hexotestsite/tags/Schedule/" style="font-size: 10px;">Schedule</a> <a href="/hexotestsite/tags/Sharing/" style="font-size: 10px;">Sharing</a> <a href="/hexotestsite/tags/Shell-script/" style="font-size: 10px;">Shell script</a> <a href="/hexotestsite/tags/System-integration/" style="font-size: 16px;">System integration</a> <a href="/hexotestsite/tags/Tensorflow/" style="font-size: 12px;">Tensorflow</a> <a href="/hexotestsite/tags/Toolkit/" style="font-size: 10px;">Toolkit</a> <a href="/hexotestsite/tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a>
+      <a href="/hexotestsite/tags/AI/" style="font-size: 10px;">AI</a> <a href="/hexotestsite/tags/AR-VR/" style="font-size: 10px;">AR/VR</a> <a href="/hexotestsite/tags/Apple/" style="font-size: 10px;">Apple</a> <a href="/hexotestsite/tags/BigQuery/" style="font-size: 10px;">BigQuery</a> <a href="/hexotestsite/tags/ChromOSO/" style="font-size: 10px;">ChromOSO</a> <a href="/hexotestsite/tags/ChromeOS/" style="font-size: 14px;">ChromeOS</a> <a href="/hexotestsite/tags/Chromebook/" style="font-size: 12px;">Chromebook</a> <a href="/hexotestsite/tags/Cloud-integration/" style="font-size: 10px;">Cloud integration</a> <a href="/hexotestsite/tags/Data/" style="font-size: 16px;">Data</a> <a href="/hexotestsite/tags/Data-Visulization/" style="font-size: 12px;">Data Visulization</a> <a href="/hexotestsite/tags/Data-flow/" style="font-size: 10px;">Data flow</a> <a href="/hexotestsite/tags/Data-visualization/" style="font-size: 14px;">Data visualization</a> <a href="/hexotestsite/tags/Deep-learning/" style="font-size: 12px;">Deep learning</a> <a href="/hexotestsite/tags/Digital-Twins/" style="font-size: 10px;">Digital Twins</a> <a href="/hexotestsite/tags/Excel/" style="font-size: 10px;">Excel</a> <a href="/hexotestsite/tags/Git/" style="font-size: 10px;">Git</a> <a href="/hexotestsite/tags/Gitfind/" style="font-size: 10px;">Gitfind</a> <a href="/hexotestsite/tags/Github/" style="font-size: 16px;">Github</a> <a href="/hexotestsite/tags/Google-Analytics/" style="font-size: 10px;">Google Analytics</a> <a href="/hexotestsite/tags/HTML/" style="font-size: 10px;">HTML</a> <a href="/hexotestsite/tags/Hexo/" style="font-size: 14px;">Hexo</a> <a href="/hexotestsite/tags/Hexo-Github-Web/" style="font-size: 10px;">Hexo, Github, Web</a> <a href="/hexotestsite/tags/IT/" style="font-size: 18px;">IT</a> <a href="/hexotestsite/tags/Industry-4-0/" style="font-size: 10px;">Industry 4.0</a> <a href="/hexotestsite/tags/Linux/" style="font-size: 14px;">Linux</a> <a href="/hexotestsite/tags/Machine-learning/" style="font-size: 12px;">Machine learning</a> <a href="/hexotestsite/tags/NPI/" style="font-size: 10px;">NPI</a> <a href="/hexotestsite/tags/Non-SQL/" style="font-size: 10px;">Non SQL</a> <a href="/hexotestsite/tags/PPT/" style="font-size: 10px;">PPT</a> <a href="/hexotestsite/tags/Process-flow/" style="font-size: 10px;">Process flow</a> <a href="/hexotestsite/tags/Product-management/" style="font-size: 10px;">Product management</a> <a href="/hexotestsite/tags/Program-management/" style="font-size: 10px;">Program management</a> <a href="/hexotestsite/tags/Project-management/" style="font-size: 18px;">Project management</a> <a href="/hexotestsite/tags/Python/" style="font-size: 20px;">Python</a> <a href="/hexotestsite/tags/Quality/" style="font-size: 10px;">Quality</a> <a href="/hexotestsite/tags/Quality-management/" style="font-size: 10px;">Quality management</a> <a href="/hexotestsite/tags/R/" style="font-size: 10px;">R</a> <a href="/hexotestsite/tags/RMA/" style="font-size: 12px;">RMA</a> <a href="/hexotestsite/tags/Roadmap/" style="font-size: 10px;">Roadmap</a> <a href="/hexotestsite/tags/SQL/" style="font-size: 16px;">SQL</a> <a href="/hexotestsite/tags/Schedule/" style="font-size: 10px;">Schedule</a> <a href="/hexotestsite/tags/Sharing/" style="font-size: 10px;">Sharing</a> <a href="/hexotestsite/tags/Shell-script/" style="font-size: 10px;">Shell script</a> <a href="/hexotestsite/tags/System-integration/" style="font-size: 16px;">System integration</a> <a href="/hexotestsite/tags/Tensorflow/" style="font-size: 12px;">Tensorflow</a> <a href="/hexotestsite/tags/Toolkit/" style="font-size: 10px;">Toolkit</a> <a href="/hexotestsite/tags/Troubleshooting/" style="font-size: 10px;">Troubleshooting</a>
     </div>
   </div>
 
@@ -953,7 +945,7 @@ Tensorflow 包含了一維...
     <h3 class="widget-title">Archives</h3>
 
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/11/">November 2021</a><span class="archive-list-count">13</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/10/">October 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/09/">September 2021</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/08/">August 2021</a><span class="archive-list-count">2</span></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2022/09/">September 2022</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/12/">December 2021</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/11/">November 2021</a><span class="archive-list-count">12</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/10/">October 2021</a><span class="archive-list-count">7</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/09/">September 2021</a><span class="archive-list-count">15</span></li><li class="archive-list-item"><a class="archive-list-link" href="/hexotestsite/archives/2021/08/">August 2021</a><span class="archive-list-count">2</span></li></ul>
     </div>
   </div>
 
