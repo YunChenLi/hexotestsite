@@ -1,0 +1,8 @@
+## Azure Functions
+
+可以用來開發、後端web service、API、響應資料庫變更、處理IOT裝置資料串流、處理排程工作、管理Manage Queues(訊息佇列)
+
+用command line來建制Azure Functions學習如何使用TypeScript語言在Azure Functions上開發、測試、部署API並將聊天機器人bot server重構至Azure Functions.
+
+
+
