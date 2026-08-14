@@ -1,0 +1,19 @@
+Decision Matrix of Proxy and Passthrough - 
+
+
+| 比較維度 | Proxy Network LB | Passthrough Network LB |
+| :--- | :--- | :--- |
+| **連線終止點** | 負載平衡器本身 (Terminates at LB) | 後端伺服器 (Terminates at Backend) |
+| **流量回傳機制** | 後端 ➔ LB ➔ 客戶端 | 後端 ➔ 直接回傳客戶端 (DSR) |
+| **客戶端 IP 可見性** | 後端看到的是 LB 的內網 IP (需靠 X-Forwarded-For 或 Proxy Protocol 獲取原本 IP) | 後端直接看到客戶端真實 IP (Client IP Preserved) |
+| **SSL / TLS 解密** | 支援 SSL Offloading (LB 端集中解密) | 不支援，後端伺服器需自行解密 |
+| **支援之協定** | TCP (特定的 SSL/TLS 代理) | TCP, UDP, GRE, ESP 等多元 L4 協定 |
+| **核心優勢** | 安全防護、架構隔離、降低後端 CPU 負擔 | 超高吞吐量、極低延遲、無流量回傳瓶頸 |
+
+
+
+
+
+
+
+
